@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/js/jquery-3.2.0.min.js"></script>
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/angular-route.min.js"></script>
+    <script src="/js/angular-animate.min.js"></script>
+    <script src="js/index.js"></script>
+    <style>
+        table{
+            margin: auto;
+            width: 580px;
+            border-collapse:collapse;
+        }
+        caption{
+            line-height: 30px;
+            font-weight: bold;
+        }
+        table,tr,td,th,input{
+            border:1px solid green;
+            text-align: center;
+        }
+        input{
+            border:none;
+        }
+        .add{
+            cursor: pointer;
+            margin: auto;
+            text-align: center;
+            border:1px solid green;
+            width: 580px;
+            margin-top: 10px;
+        }
+        .addInfoBox .addInfo form input{
+            margin:10px 0;
+        }
+        a{
+            width:100%;
+            height:100%;
+        }
+        .view-animate {
+            transition:none;
+        }
+        .xiaoguo{
+            width:100%;
+            height:100%;
+            background: #000;
+            position: fixed;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            margin:auto;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body ng-app="myApp" ng-controller="mycontrol">
+    <div ng-view class="view-animate"></div>
+    <div class="add" ng-click="add()" ng-show="isAddInfoShow==false">
+        <div colspan="4"><a href="#!/addInfo">+</a></div>
+    </div>
+    <div class="add" ng-show="isAddInfoShow==true">
+        <button ng-click="reset()"><a href="#!/">添加</a></button>
+    </div>
+
+    <div class="xiaoguo" ng-show="isshow==true"></div>
+</body>
+<script>
+
+</script>
+</html>

@@ -1,0 +1,60 @@
+
+<style>
+    .view-animate {
+        transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+        position: absolute;
+        top:50px;
+    }
+
+    .view-animate.ng-enter, .view-animate.ng-leave {
+
+        display:block;
+        /*width:100%;*/
+        top:50px;
+        left:0;
+    }
+
+    .view-animate.ng-enter {
+        top:50px;
+        left:100%;
+    }
+    .view-animate.ng-enter.ng-enter-active {
+        top:50px;
+        left:0;
+    }
+    .view-animate.ng-leave.ng-leave-active {
+        top:50px;
+        left:-100%;
+    }
+    .wdbAddBox{
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+    }
+    .one{
+        font-size: 16px;
+    }
+</style>
+<div class="wdbAddBox">
+    <form class="cmxform" id="signupForm" method="get" action="" novalidate>
+        <fieldset>
+            <p class="one">
+                <label for="firstname">姓&nbsp;&nbsp;&nbsp;&nbsp;名&nbsp;&nbsp;:&nbsp;&nbsp;</label>
+                <input id="firstname" name="firstname" type="text" ng-model="newarr.name">
+            </p>
+            <p class="one">
+                <label for="firstname">性&nbsp;&nbsp;&nbsp;&nbsp;别&nbsp;&nbsp;:&nbsp;&nbsp;</label>
+                <input id="firstname" name="firstname" type="text" ng-model="newarr.sex">
+            </p>
+            <p class="one">
+                <label for="firstname">年&nbsp;&nbsp;&nbsp;&nbsp;龄&nbsp;&nbsp;:&nbsp;&nbsp;</label>
+                <input id="firstname" name="firstname" type="text" ng-model="newarr.age">
+            </p>
+            <p class="one">
+                <button ng-click="reset()"><a href="#!/">添加</a></button>
+            </p>
+        </fieldset>
+    </form>
+    <div class="xiaoguo" ng-show="isshow==true"></div>
+</div>
